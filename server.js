@@ -55,7 +55,7 @@ app.get('/todos/:id', function(req, res) {
 	});
 });
 
-//POST /todos
+//POST /todos/:id
 app.post('/todos', function(req, res) {
 	var body = _.pick(req.body, 'description', 'completed');
 
