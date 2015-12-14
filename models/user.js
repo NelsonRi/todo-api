@@ -17,5 +17,13 @@ module.exports = function (sequelize, DataTypes) {
 				// Add Validation for Numbers, Letters, & repeated characters
 			}
 		}
+	}, {
+		hooks: {
+			beforeValidate: function (user, options) {
+				if (typeof user.email === 'string') {
+					user.email = user.email.toLowerCase();
+				}
+			}
+		}
 	});
 };
