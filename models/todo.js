@@ -1,3 +1,4 @@
+/* Todo Model - template for what's allowed in todos, anything else is filtered out by _.js */
 module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('todo', {
 		description: {

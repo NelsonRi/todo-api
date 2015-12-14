@@ -1,3 +1,4 @@
+/* User Model - template for what is required for validation during login */
 module.exports = function (sequelize, DataTypes) {
 	return sequelize.define('user', {
 		email: {
