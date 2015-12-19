@@ -65,7 +65,7 @@ app.get('/todos/:id', middleware.requireAuthentication, function (req, res) {
 	});
 });
 
-//POST /todos/:id
+//POST /todos
 app.post('/todos', middleware.requireAuthentication, function (req, res) {
 	var body = _.pick(req.body, 'description', 'completed');
 
