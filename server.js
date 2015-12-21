@@ -157,9 +157,7 @@ app.post('/users/login', function (req, res) {
 		var token = user.generateToken('authentication');
 		userInstance = user;
 		
-		return db.token.create({
-			token: token
-		});
+		return db.token.create({token: token});
 	}).then(function (tokenInstance) {
 		res.header('Auth', tokenInstance.get('token')).json(userInstance.toPublicJSON());
 	}).catch(function () {
